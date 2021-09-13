@@ -1,3 +1,3 @@
 Food Order App
 <hr>
-This app developed as an exercise on the React.js
+This application is developed as an exercise on the React.js
