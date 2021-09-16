@@ -2,7 +2,7 @@ import classes from './Cart.module.css';
 import DUMMY_MEALS from './../../fixtures/DUMMY_MEALS.js';
 import Modal from '../UI/Modal';
 
-const Cart = props => {
+const Cart = ({onHideCart}) => {
   const cartitems = (
     <ul className={classes['cart-items']}>
       {DUMMY_MEALS.map(item => (
@@ -12,14 +12,14 @@ const Cart = props => {
   );
   return (
     // the cart it will be in the modal
-    <Modal>
+    <Modal onClickBack={onHideCart}>
       {cartitems}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>35.2</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Close</button>
+        <button className={classes['button--alt']} onClick={onHideCart}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
