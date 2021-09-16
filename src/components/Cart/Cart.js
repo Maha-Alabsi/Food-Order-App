@@ -1,12 +1,29 @@
-import React from 'react'
+import classes from './Cart.module.css';
+import DUMMY_MEALS from './../../fixtures/DUMMY_MEALS.js';
+import Modal from '../UI/Modal';
 
-const Cart = (props) => {
-    return (
-        <div>
-            cartitems
-            
-        </div>
-    )
-}
+const Cart = props => {
+  const cartitems = (
+    <ul className={classes['cart-items']}>
+      {DUMMY_MEALS.map(item => (
+        <li>{item.name}</li>
+      ))}
+    </ul>
+  );
+  return (
+    // the cart it will be in the modal
+    <Modal>
+      {cartitems}
+      <div className={classes.total}>
+        <span>Total Amount</span>
+        <span>35.2</span>
+      </div>
+      <div className={classes.actions}>
+        <button className={classes['button--alt']}>Close</button>
+        <button className={classes.button}>Order</button>
+      </div>
+    </Modal>
+  );
+};
 
 export default Cart;
