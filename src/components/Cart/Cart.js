@@ -1,5 +1,5 @@
 import classes from './Cart.module.css';
-import DUMMY_MEALS from './../../fixtures/DUMMY_MEALS.js';
+import DUMMY_MEALS from './../../fixed values/DUMMY_MEALS.js';
 import Modal from '../UI/Modal';
 
 const Cart = ({ onHideCart }) => {

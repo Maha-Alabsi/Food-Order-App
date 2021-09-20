@@ -1,5 +1,5 @@
 import classes from './AvailableMeals.module.css';
-import DUMMY_MEALS from './../../fixtures/DUMMY_MEALS.js';
+import DUMMY_MEALS from './../../fixed values/DUMMY_MEALS.js';
 import MealItem from './MealItem/MealItem';
 import Card from '../UI/Card';
 

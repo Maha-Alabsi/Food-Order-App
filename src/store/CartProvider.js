@@ -1,5 +1,4 @@
 import CartContext from './Cartcontext';
-// import DUMMY_MEALS from '../fixtures/DUMMY_MEALS'
 import { useReducer } from 'react';
 
 const defaultCartState = {
@@ -19,6 +18,8 @@ const cartReducer = (state, action) => {
   }
   return defaultCartState;
 };
+
+
 const CartProvider = props => {
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
